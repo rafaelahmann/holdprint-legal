@@ -3,29 +3,72 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Holdprint — Documentos legais</title>
+<title>Agenda HoldprintWeb — Integração de calendário</title>
+<meta name="description" content="Agenda HoldprintWeb conecta o Google Calendar e o Microsoft Outlook ao sistema de gestão Holdprint, sincronizando os eventos da sua agenda nos dois sentidos.">
 <style>
-  body { margin:0; background:#f8fafc; color:#1f2937;
-    font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
-  .wrap { max-width:680px; margin:0 auto; padding:64px 24px; }
-  .brand-logo { height:38px; width:auto; display:block; margin-bottom:14px; }
-  h1 { font-size:26px; margin:12px 0 24px; }
-  a.card { display:block; text-decoration:none; color:#1f2937; background:#fff;
-    border:1px solid #e5e7eb; border-radius:12px; padding:18px 20px; margin:12px 0;
-    transition:border-color .15s; }
-  a.card:hover { border-color:#2563eb; }
-  a.card strong { color:#2563eb; }
-  .muted { color:#6b7280; font-size:14px; }
+  :root { --ink:#1f2937; --muted:#6b7280; --line:#e5e7eb; --brand:#2563eb; --navy:#16243b; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:#f8fafc; color:var(--ink);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  .wrap { max-width:880px; margin:0 auto; padding:56px 24px 80px; }
+  .brand-logo { height:44px; width:auto; display:block; margin-bottom:36px; }
+  h1 { font-size:34px; line-height:1.2; margin:0 0 12px; color:var(--navy); }
+  .lead { font-size:18px; color:#374151; max-width:680px; margin:0 0 14px; }
+  .sub { color:var(--muted); max-width:680px; margin:0 0 40px; }
+  h2 { font-size:20px; margin:40px 0 10px; color:var(--navy); }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; margin-top:8px; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:12px; padding:18px 20px; }
+  .card h3 { margin:0 0 6px; font-size:16px; color:var(--navy); }
+  .card p { margin:0; font-size:14px; color:var(--muted); }
+  ul { padding-left:20px; } li { margin:5px 0; }
+  a { color:var(--brand); }
+  .links { margin-top:36px; display:flex; gap:14px; flex-wrap:wrap; }
+  .links a { display:inline-block; text-decoration:none; border:1px solid var(--line);
+    background:#fff; border-radius:9px; padding:10px 16px; font-weight:600; }
+  footer { margin-top:56px; border-top:1px solid var(--line); padding-top:18px; color:var(--muted); font-size:13px; }
 </style>
 </head>
 <body>
 <div class="wrap">
   <img class="brand-logo" src="logo.png" alt="Holdprint">
-  <h1>Documentos legais — Integração de Agenda</h1>
-  <a class="card" href="privacidade.html"><strong>Política de Privacidade →</strong><br>
-    <span class="muted">Como tratamos os dados da integração com Google Calendar e Outlook.</span></a>
-  <a class="card" href="termos.html"><strong>Termos de Uso →</strong><br>
-    <span class="muted">Condições de uso do recurso de sincronização de agenda.</span></a>
+
+  <h1>Agenda HoldprintWeb</h1>
+  <p class="lead">A <strong>Agenda HoldprintWeb</strong> conecta o seu <strong>Google Calendar</strong> e o
+  <strong>Microsoft Outlook</strong> ao sistema de gestão <strong>Holdprint</strong>, mantendo os eventos da
+  sua agenda sincronizados nos dois sentidos, dentro de um calendário dedicado à conexão.</p>
+  <p class="sub">É um recurso do Holdprint, o ERP usado por empresas de comunicação visual e gráficas para
+  gerir orçamentos, produção, financeiro e relacionamento com clientes. A integração de agenda é individual:
+  cada usuário conecta a própria conta e autoriza o acesso por conta própria, via OAuth.</p>
+
+  <h2>O que o app faz</h2>
+  <div class="grid">
+    <div class="card"><h3>Importa seus eventos</h3>
+      <p>Os compromissos do seu Google Calendar e do Outlook aparecem dentro da agenda do Holdprint, em um
+      calendário separado para cada conta conectada.</p></div>
+    <div class="card"><h3>Sincroniza nos dois sentidos</h3>
+      <p>Eventos criados ou editados no Holdprint são enviados de volta à sua agenda externa, e vice-versa,
+      mantendo tudo atualizado.</p></div>
+    <div class="card"><h3>Acesso individual e seguro</h3>
+      <p>Você autoriza o acesso pela sua própria conta. Os tokens são guardados de forma criptografada e o
+      acesso pode ser revogado a qualquer momento.</p></div>
+  </div>
+
+  <h2>Dados que o app utiliza</h2>
+  <ul>
+    <li>Eventos do Google Calendar (escopo <code>https://www.googleapis.com/auth/calendar</code>) e do
+      Outlook: título, descrição, horários, local, participantes e status — para exibir e sincronizar a agenda.</li>
+    <li>Nome e e-mail da sua conta Holdprint, para identificar o titular da agenda.</li>
+  </ul>
+  <p>Não usamos esses dados para publicidade, não os vendemos e não os utilizamos para treinar modelos de IA.
+  Detalhes completos na Política de Privacidade.</p>
+
+  <div class="links">
+    <a href="privacidade.html">Política de Privacidade</a>
+    <a href="termos.html">Termos de Uso</a>
+    <a href="mailto:rafael@holdprint.net">Contato: rafael@holdprint.net</a>
+  </div>
+
+  <footer>© 2026 Holdprint · Agenda HoldprintWeb</footer>
 </div>
 </body>
 </html>
