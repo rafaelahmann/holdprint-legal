@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidade — Integração de Agenda Holdprint</title>
+<style>
+  :root { --ink:#1f2937; --muted:#6b7280; --line:#e5e7eb; --brand:#2563eb; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:#f8fafc; color:var(--ink);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  .wrap { max-width:780px; margin:0 auto; padding:48px 24px 80px; }
+  header { border-bottom:1px solid var(--line); padding-bottom:20px; margin-bottom:32px; }
+  .brand { font-weight:700; color:var(--brand); letter-spacing:.2px; }
+  h1 { font-size:28px; margin:14px 0 6px; }
+  h2 { font-size:19px; margin:34px 0 8px; }
+  .muted { color:var(--muted); font-size:14px; }
+  a { color:var(--brand); }
+  ul { padding-left:20px; }
+  li { margin:4px 0; }
+  .box { background:#eef2ff; border:1px solid #c7d2fe; border-radius:10px; padding:14px 16px; margin:18px 0; font-size:15px; }
+  footer { margin-top:48px; border-top:1px solid var(--line); padding-top:18px; color:var(--muted); font-size:13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">Holdprint</div>
+    <h1>Política de Privacidade — Integração de Agenda</h1>
+    <p class="muted">Última atualização: 30 de junho de 2026</p>
+  </header>
+
+  <p>Esta Política de Privacidade descreve como o sistema de gestão <strong>Holdprint</strong>
+  ("Holdprint", "nós") coleta, usa, armazena e protege as informações tratadas pelo recurso de
+  <strong>sincronização de agenda</strong> com provedores externos (Google Calendar e Microsoft Outlook).
+  Ao conectar uma conta externa à sua agenda no Holdprint, você concorda com esta Política.</p>
+
+  <h2>1. Quais dados acessamos</h2>
+  <p>Para sincronizar sua agenda, acessamos, mediante sua autorização explícita via OAuth:</p>
+  <ul>
+    <li><strong>Dados da sua conta Holdprint:</strong> nome e e-mail usados para identificar o titular da agenda.</li>
+    <li><strong>Eventos do Google Calendar</strong> (via Google Calendar API, escopo
+      <code>https://www.googleapis.com/auth/calendar</code>) e/ou do <strong>Microsoft Outlook</strong>
+      (via Microsoft Graph): título, descrição, data e horário de início e término, indicação de
+      dia inteiro, local, participantes convidados e status do evento.</li>
+    <li><strong>Tokens de autorização (OAuth)</strong> fornecidos pelo provedor para permitir a
+      sincronização contínua sem exigir novo login a cada operação.</li>
+  </ul>
+
+  <h2>2. Como usamos esses dados</h2>
+  <ul>
+    <li>Exibir seus eventos da agenda externa dentro do Holdprint, em um calendário dedicado àquela conexão.</li>
+    <li>Sincronizar, nos dois sentidos, eventos entre a sua agenda externa e a sua agenda no Holdprint.</li>
+    <li>Manter a conexão ativa e atualizar os eventos quando houver alterações.</li>
+  </ul>
+  <p><strong>Não</strong> usamos esses dados para publicidade, <strong>não</strong> vendemos ou alugamos
+  seus dados, <strong>não</strong> os transferimos a terceiros para fins próprios e <strong>não</strong>
+  os utilizamos para treinar modelos de inteligência artificial.</p>
+
+  <div class="box">
+    <strong>Uso Limitado (Google API Services).</strong> O uso e a transferência, pela Holdprint, de
+    informações recebidas das APIs do Google obedecerão à
+    <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">
+    Política de Dados do Usuário dos Serviços de API do Google</a>, incluindo os requisitos de
+    <strong>Uso Limitado (Limited Use)</strong>.
+  </div>
+
+  <h2>3. Armazenamento e segurança</h2>
+  <ul>
+    <li>Os <strong>tokens de acesso e atualização</strong> são armazenados de forma <strong>criptografada</strong>
+      (AES) em nossos bancos de dados; nunca em texto puro.</li>
+    <li>Os eventos importados são espelhados na base de dados do seu ambiente Holdprint, com acesso
+      restrito ao próprio titular e à sua organização, conforme as permissões do sistema.</li>
+    <li>O tráfego é protegido por HTTPS/TLS. O acesso à infraestrutura é controlado e auditado.</li>
+  </ul>
+
+  <h2>4. Compartilhamento</h2>
+  <p>Não compartilhamos seus dados de agenda com terceiros, exceto provedores de infraestrutura de
+  nuvem (hospedagem e banco de dados) estritamente necessários para operar o serviço, todos sujeitos
+  a obrigações de confidencialidade, ou quando exigido por lei.</p>
+
+  <h2>5. Retenção e exclusão de dados</h2>
+  <ul>
+    <li>Você pode <strong>desconectar</strong> a integração a qualquer momento na tela de Agenda do Holdprint.
+      Ao desconectar, os tokens de autorização são revogados e removidos.</li>
+    <li>Os eventos espelhados da conexão são removidos do Holdprint após a desconexão.</li>
+    <li>Você pode solicitar a exclusão completa dos seus dados enviando um e-mail para
+      <a href="mailto:rafael@holdprint.net">rafael@holdprint.net</a>; atenderemos em até 30 dias.</li>
+  </ul>
+
+  <h2>6. Seus direitos (LGPD)</h2>
+  <p>Nos termos da Lei Geral de Proteção de Dados (Lei nº 13.709/2018), você pode solicitar acesso,
+  correção, portabilidade ou exclusão dos seus dados, bem como revogar consentimentos, pelo contato abaixo.</p>
+
+  <h2>7. Alterações nesta política</h2>
+  <p>Podemos atualizar esta Política periodicamente. A data da última atualização é indicada no topo
+  desta página. Alterações relevantes serão comunicadas pelos canais do Holdprint.</p>
+
+  <h2>8. Contato</h2>
+  <p>Dúvidas sobre privacidade: <a href="mailto:rafael@holdprint.net">rafael@holdprint.net</a></p>
+
+  <footer>
+    © 2026 Holdprint. Todos os direitos reservados. ·
+    <a href="termos.html">Termos de Uso</a>
+  </footer>
+</div>
+</body>
+</html>
